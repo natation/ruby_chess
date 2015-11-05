@@ -28,6 +28,7 @@ Move validation is the most difficult part of implementing chess. The reason is
 because there are 6 different pieces per color and they all move differently.
 I wanted to be able to extract the common move functionality and DRY out and
 make the code clean.
+
 First, I modularized Steppable and Slideable:
 ```ruby
 module Slideable
@@ -74,6 +75,7 @@ end
 This allows possible move calculations for Slideable pieces (queen, rook, bishop)
 and Steppable pieces (king, knight), given each of their "move deltas", which are
 seeded inside its respective piece class.
+
 Next, I extracted common piece functionality into a parent Piece class, which
 includes calculating all its "move deltas" and its possible moves. In addition,
 we do not want the move to put the moving player into check, so we check
@@ -81,9 +83,10 @@ this as well, no pun intended, in the Piece class.
 
 Seeing whether a player is in check is the crux of implementing chess. There are
 two approaches to this:
-1. Duplicating the board and making the move on the duplicated board.
-2. Actually making the move on the board, but not rendering until the move is
-   determined to be valid.
+* Duplicating the board and making the move on the duplicated board.
+* Actually making the move on the board, but not rendering until the move is
+determined to be valid.
+
 I chose the latter approach as I feel this is more intuitive, closer to what
 happens in real-life, and would save the memory of duplicating the board.
 Not duplicating the board presents its own challenges, however, as you have to
