@@ -15,6 +15,10 @@ pieces seem too small, zoom in to display a larger board.
 * Slideable (for queen, bishop, rook) and Steppable (for king, knight) modules
 * Displays info about current game status (who's turn, in_check?, checkmate?)
 * Utilizes Colorize gem for custom colors
+* Initial board display
+  ![chess_initial](assets/initial.png)
+* Board during gameplay
+  ![chess_gameplay](assets/game_play.png)
 
 ## Code Discussion
 
