@@ -16,9 +16,9 @@ pieces seem too small, zoom in to display a larger board.
 * Displays info about current game status (who's turn, in_check?, checkmate?)
 * Utilizes Colorize gem for custom colors
 * Initial board display
-  ![chess_initial](assets/initial.png)
+  * ![chess_initial](assets/initial.png)
 * Board during gameplay
-  ![chess_gameplay](assets/game_play.png)
+  * ![chess_gameplay](assets/game_play.png)
 
 ## Code Discussion
 
